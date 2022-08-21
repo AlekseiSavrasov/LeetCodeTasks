@@ -35,33 +35,33 @@ class Solution:
 
 # MY SOLUTION (with extra classes, but incorrect :( )
 # Add a class of list to make the operations understandable
-class LinkedList:
-    def __init__(self):
-        self.head = None # a head is the current node with its value and link
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None # a head is the current node with its value and link
 
-    def insert(self, data): # insert a value to the end of list
-        newNode = ListNode(data)
-        if (self.head):
-            current = self.head
-            while (current.next):
-                current = current.next
-            current.next = newNode
-        else:
-            self.head = newNode
+#     def insert(self, data): # insert a value to the end of list
+#         newNode = ListNode(data)
+#         if (self.head):
+#             current = self.head
+#             while (current.next):
+#                 current = current.next
+#             current.next = newNode
+#         else:
+#             self.head = newNode
 
-    def printLL(self): # Print all values from the list one by one
-        current = self.head
-        while(current):
-            print(current.val)
-            current = current.next
+#     def printLL(self): # Print all values from the list one by one
+#         current = self.head
+#         while(current):
+#             print(current.val)
+#             current = current.next
 
-    def list_length(self): # Estimate length of the list
-        length = 0
-        current = self.head
-        while(current):
-            length += 1
-            current = current.next
-        return length
+#     def list_length(self): # Estimate length of the list
+#         length = 0
+#         current = self.head
+#         while(current):
+#             length += 1
+#             current = current.next
+#         return length
 
 # class Solution:
 #     class ListNode:
