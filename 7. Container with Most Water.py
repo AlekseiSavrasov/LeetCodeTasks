@@ -23,3 +23,22 @@ for i, k in enumerate(height):
     s.append(max_sq_r)
 
 print(max(s))
+
+# Good solution from LeetCode
+# https://leetcode.com/problems/container-with-most-water/discuss/2485674/simple-python-solution
+# def maxArea(self, height: List[int]) -> int:
+#     r = len(height) - 1
+#     l = 0
+#     maxarea = 0
+#     while l != r:
+#         width = r - l
+#         hei = min(height[r], height[l])
+#         area = width * hei
+#         if area > maxarea:
+#             maxarea = area
+#         if height[l] > height[r]:
+#             r -= 1
+#         else:
+#             l += 1
+#
+#     return (maxarea)
