@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/add-two-numbers/
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -143,7 +144,11 @@ class Solution:
 # result = s.addTwoNumbers(l1, l2)
 # result.printLL()
 
+# class Solution:
+#     def addTwoNumbers(self, l1: ListNode, l2: ListNode):
+#         return l1.val
 
+# print(s.addTwoNumbers(l1, l2))
 
 #         if len(l1) > len(l2):
 #             add = len(l1) - len(l2)
