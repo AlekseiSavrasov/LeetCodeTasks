@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/3sum/
 
+# My solution (correct, but slow):
 nums = [-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0]
 result = []
 
@@ -51,3 +52,26 @@ print(result)
 #                 and list([-(k+l), l, k]) not in nums:
 #             result.append(list([k,l, -(k+l)]))
 # print(result)
+
+
+# Correct Solution
+def threeSum(self, arr: List[int]) -> List[List[int]]:
+    arr.sort()
+    target = 0
+    res = []
+    for i in range(len(arr) - 2):
+        l = i + 1
+        r = len(arr) - 1
+        while l < r:
+            if arr[i] + arr[l] + arr[r] == target:
+                res.append((arr[i], arr[l], arr[r]))
+                l += 1
+                r -= 1
+            elif arr[i] + arr[l] + arr[r] > target:
+                r -= 1
+            else:
+                l += 1
+    ans = []
+    for i in list(set(res)):
+        ans.append(list(i))
+    return ans
